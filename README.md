@@ -1,45 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Discord Rich Presence - Presence.js</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    line-height: 1.6;
-    color: #222;
-    background: #f9f9f9;
-  }
-  h1, h2 {
-    color: #5865F2;
-  }
-  pre {
-    background: #2d2d2d;
-    color: #f8f8f2;
-    padding: 1rem;
-    overflow-x: auto;
-    border-radius: 6px;
-  }
-  code {
-    font-family: Consolas, monospace;
-    font-size: 0.95rem;
-  }
-  a {
-    color: #5865F2;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  hr {
-    margin: 2rem 0;
-  }
-</style>
-</head>
+<h1 align="center">✨ Discord Presence - Redshoter ✨</h1>
+
+<p align="center">
+  ¡Bienvenido a <strong>Discord Presence</strong>! Este es el sitio oficial de <strong>Discord Presence de Roody</strong>, sl sistema de presencias de Discord más fácil de usar de todos.
+</p>
+
 <body>
   <h1>Discord Rich Presence - Presence.js</h1>
 
@@ -82,7 +46,7 @@
 
   <h2>Personalización</h2>
   <ul>
-    <li>Cambia el <code>clientId</code> en <code>presence.js</code> por el ID de tu aplicación Discord.</li>
+    <li>Cambia el <code>clientId</code> en <code>presence.js</code> por el ID de tu aplicación Discord. <a href="https://discord.com/developers/applications/" target="_blank" rel="noopener noreferrer">(Obtenla aquí)</a></li>
     <li>Modifica el estado, detalles y claves de imágenes (<code>largeImageKey</code>, etc.) en <code>presence.js</code> para mostrar lo que desees.</li>
     <li>Asegúrate de que las imágenes estén subidas en el panel de Rich Presence de tu aplicación Discord.</li>
   </ul>

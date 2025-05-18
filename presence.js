@@ -1,21 +1,30 @@
+// Importamos la librería discord-rpc
 const RPC = require("discord-rpc");
 
+// Declaramos el Client ID de la aplicación que creaste en Discord Developers
 const clientId = "1373657858872315904";
+
+// Registramos el Client ID para el RPC (esto es necesario para algunas versiones)
 RPC.register(clientId);
 
+// Creamos una instancia del cliente RPC con transporte IPC (comunicación local con Discord)
 const rpc = new RPC.Client({ transport: "ipc" });
 
+// Evento que se dispara cuando el cliente RPC está listo y conectado a Discord
 rpc.on("ready", () => {
+  // Configuramos la actividad que aparecerá en el perfil de Discord
   rpc.setActivity({
-    details: "Programando Bots",
-    state: "preparando configuraciones...",
-    startTimestamp: new Date(),
-    largeImageKey: "logo",
-    largeImageText: "Roody's Shop",
-    instance: false,
+    details: "Programando Bots",          // Texto principal (línea 1)
+    state: "preparando configuraciones...", // Texto secundario (línea 2)
+    startTimestamp: new Date(),            // Marca de tiempo para mostrar cuánto tiempo llevas en esta actividad
+    largeImageKey: "logo",                 // Imagen grande (debe coincidir con el nombre de la imagen subida en tu aplicación Discord)
+    largeImageText: "Roody's Shop",       // Tooltip al pasar sobre la imagen grande
+    instance: false,                       // Indica si esta instancia es única
   });
 
+  // Mensaje en consola para saber que el RPC está activo
   console.log("Rich Presence iniciado.");
 });
 
+// Iniciamos sesión en Discord con el Client ID especificado
 rpc.login({ clientId }).catch(console.error);
