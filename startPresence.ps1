@@ -1,1 +1,0 @@
-Start-Process -FilePath "node.exe" -ArgumentList "C:\Users\redsh\OneDrive\Escritorio\Discord-Presence\presence.js" -WindowStyle Hidden

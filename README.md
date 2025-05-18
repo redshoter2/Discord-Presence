@@ -1,73 +1,80 @@
-<h1 align="center">✨ Discord Presence - Redshoter ✨</h1>
+# ✨ Discord Presence - Redshoter ✨
 
-<p align="center">
-  ¡Bienvenido a <strong>Discord Presence</strong>! Este es el sitio oficial de <strong>Discord Presence de Roody</strong>, sl sistema de presencias de Discord más fácil de usar de todos.
-</p>
+¡Bienvenido a **Discord Presence**!  
+Este es el sistema de presencias de Discord más fácil de usar de todos.
 
-<body>
-  <h1>Discord Rich Presence - Presence.js</h1>
+---
 
-  <p>Este proyecto es un pequeño script en Node.js que utiliza la librería <code>discord-rpc</code> para mostrar un estado personalizado (Rich Presence) en Discord. Está configurado para mostrar que estás <strong>“Programando Bots”</strong> con un estado adicional y una imagen personalizada.</p>
+## 📌 Descripción
 
-  <hr />
+Este proyecto es un pequeño script en Node.js que utiliza la librería [`discord-rpc`](https://www.npmjs.com/package/discord-rpc) para mostrar un estado personalizado (Rich Presence) en Discord.
 
-  <h2>Archivos incluidos</h2>
-  <ul>
-    <li><strong>presence.js</strong><br />Script principal que se conecta a Discord y actualiza el Rich Presence con los detalles configurados.</li>
-    <li><strong>startPresence.ps1</strong><br />Script PowerShell que ejecuta <code>presence.js</code> con Node.js en segundo plano, ocultando la ventana de la consola.</li>
-    <li><strong>execute.bat</strong><br />Archivo batch que lanza el script PowerShell para iniciar el <code>presence.js</code> en modo oculto.</li>
-  </ul>
+Está configurado para mostrar que estás **“Haciendo Una Tarea”**, con estado adicional, botones y una imagen personalizada.
 
-  <hr />
+---
 
-  <h2>Requisitos</h2>
-  <ul>
-    <li><a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">Node.js</a> instalado y accesible desde la consola (<code>node</code> en el PATH).</li>
-    <li>Módulo <code>discord-rpc</code> instalado. Puedes instalarlo con:</li>
-  </ul>
-  <pre><code>npm install discord-rpc</code></pre>
-  <ul>
-    <li>Tener configurado un <strong>Application ID</strong> válido en Discord (en este caso <code>1373657858872315904</code>) y las imágenes correspondientes ("logo") subidas en la configuración de Rich Presence de la app Discord.</li>
-  </ul>
+## 📁 Archivos incluidos
 
-  <hr />
+- **`presence.js`**  
+  Script principal que se conecta a Discord y actualiza el Rich Presence con los detalles configurados.
 
-  <h2>Cómo usar</h2>
-  <ol>
-    <li>Clona o descarga este repositorio en tu PC.</li>
-    <li>Instala las dependencias con <code>npm install</code>.</li>
-    <li>Para ejecutar el script normalmente:
-      <pre><code>node presence.js</code></pre>
-    </li>
-    <li>Para ejecutarlo en segundo plano (sin ventana visible), usa el archivo <code>execute.bat</code>. Este ejecutará el script PowerShell que a su vez ejecuta el script Node oculto.</li>
-  </ol>
+- **`execute.bat`**  
+  Archivo `.bat` que lanza el PowerShell en modo oculto para ejecutar tu Rich Presence sin ventana visible.
 
-  <hr />
+---
 
-  <h2>Personalización</h2>
-  <ul>
-    <li>Cambia el <code>clientId</code> en <code>presence.js</code> por el ID de tu aplicación Discord. <a href="https://discord.com/developers/applications/" target="_blank" rel="noopener noreferrer">(Obtenla aquí)</a></li>
-    <li>Modifica el estado, detalles y claves de imágenes (<code>largeImageKey</code>, etc.) en <code>presence.js</code> para mostrar lo que desees.</li>
-    <li>Asegúrate de que las imágenes estén subidas en el panel de Rich Presence de tu aplicación Discord.</li>
-  </ul>
+## ✅ Requisitos
 
-  <hr />
+- Tener Node.js instalado desde [https://nodejs.org/](https://nodejs.org/)
+- Instalar el módulo `discord-rpc` ejecutando este comando en la terminal:
 
-  <h2>Notas</h2>
-  <ul>
-    <li>La ventana de la consola no aparecerá cuando ejecutes <code>execute.bat</code>.</li>
-    <li>Para detener el proceso, busca el proceso <code>node.exe</code> en el Administrador de tareas y finalízalo.</li>
-    <li>Para automatizar el arranque al iniciar Windows, puedes añadir <code>execute.bat</code> o <code>startPresence.ps1</code> al inicio de Windows (carpeta <code>shell:startup</code>).</li>
-  </ul>
+  npm install discord-rpc (Sí descargas todo, ya viene incluido en node_modules)
 
-  <hr />
+- Contar con un Client ID válido de tu app en Discord:  
+  [https://discord.com/developers/applications](https://discord.com/developers/applications)
 
-  <h2>Preguntas o problemas</h2>
-  <p>Si tienes dudas o necesitas ayuda con la configuración, no dudes en abrir un issue o contactarme.</p>
+- Subir imágenes personalizadas (como `logo`) en la configuración de Rich Presence de tu aplicación.
 
-  <hr />
+---
 
-  <p>¡Disfruta tu Rich Presence personalizado! 🚀</p>
+## 🚀 Cómo usar
 
-</body>
-</html>
+1. Clona o descarga este repositorio.
+2. Instala las dependencias con:
+
+   npm install (Sí descargaste todo, ya viene en node_modules)
+
+3. Para ejecutarlo normalmente, abre una terminal y usa:
+
+   node presence.js
+
+4. Para ejecutarlo en segundo plano (sin ventana), simplemente ejecuta el archivo `execute.bat`.
+
+---
+
+## ⚙️ Personalización
+
+- Cambia el `clientId` en `presence.js` por el de tu aplicación en Discord.
+- Modifica el estado, detalles y claves de imagen (`largeImageKey`, etc.) en `presence.js` para mostrar lo que desees.
+- Asegúrate de que las imágenes estén subidas correctamente en el apartado "Rich Presence Assets" del panel de tu aplicación.
+
+---
+
+## 🧠 Notas
+
+- La ventana de consola no aparecerá al usar `execute.bat`.
+- Para detener el proceso, abre el Administrador de tareas y finaliza `node.exe`.
+- Para que se inicie automáticamente con Windows:
+  - Pulsa `Win + R`, escribe `shell:startup` y presiona Enter.
+  - Copia `execute.bat` dentro de esa carpeta.
+
+---
+
+## ❓ Soporte
+
+¿Tienes dudas o necesitas ayuda?  
+Abre un issue en este repositorio o contáctame por Discord.
+
+---
+
+## 💜 ¡Disfruta tu Rich Presence personalizado! 🚀

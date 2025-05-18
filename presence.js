@@ -2,7 +2,7 @@
 const RPC = require("discord-rpc");
 
 // Declaramos el Client ID de la aplicación que creaste en Discord Developers
-const clientId = "1373657858872315904";
+const clientId = "TU_CLIENTID"; // Obtenlo en https://discord.com/developers/applications/ID_DE_TU_CLIENTE/oauth2
 
 // Registramos el Client ID para el RPC (esto es necesario para algunas versiones)
 RPC.register(clientId);
@@ -14,11 +14,11 @@ const rpc = new RPC.Client({ transport: "ipc" });
 rpc.on("ready", () => {
   // Configuramos la actividad que aparecerá en el perfil de Discord
   rpc.setActivity({
-    details: "Programando Bots",          // Texto principal (línea 1)
-    state: "preparando configuraciones...", // Texto secundario (línea 2)
+    details: "",          // Texto principal (línea 1)
+    state: "", // Texto secundario (línea 2)
     startTimestamp: new Date(),            // Marca de tiempo para mostrar cuánto tiempo llevas en esta actividad
     largeImageKey: "logo",                 // Imagen grande (debe coincidir con el nombre de la imagen subida en tu aplicación Discord)
-    largeImageText: "Roody's Shop",       // Tooltip al pasar sobre la imagen grande
+    largeImageText: "",       // Tooltip al pasar sobre la imagen grande
     instance: false,                       // Indica si esta instancia es única
   });
 
