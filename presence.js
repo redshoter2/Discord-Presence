@@ -19,6 +19,10 @@ rpc.on("ready", () => {
     startTimestamp: new Date(),            // Marca de tiempo para mostrar cuánto tiempo llevas en esta actividad
     largeImageKey: "logo",                 // Imagen grande (debe coincidir con el nombre de la imagen subida en tu aplicación Discord)
     largeImageText: "",       // Tooltip al pasar sobre la imagen grande
+    buttons: [
+      { label: "🌍 Visitar la web", url: "https://roody.es" }, // Añade un primer botón
+      { label: "💻 Unirse al Discord", url: "https://discord.roody.es" } // Añade un segundo botón
+    ], // ‼️ Solamente se pueden usar 2 botones
     instance: false,                       // Indica si esta instancia es única
   });
 
